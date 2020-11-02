@@ -1,3 +1,6 @@
+import React from 'react';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+
 function App() {
 
 const consumers = ['Череповец', 'Санкт-Петербург', 'Новгород' ]
@@ -27,10 +30,6 @@ if(currentMonth === 0) {
   prevMonth = currentMonth - 1
 }
 
-const onCopy = () => {
-  navigator.clipboard.writeText('+79992349352')
-}
-
   return (
     <div className="App">
       <p>Период: 14 {monthsArrEnd[prevMonth]} - 14 {monthsArrEnd[currentMonth]} {now.getFullYear()}</p>
@@ -45,7 +44,11 @@ const onCopy = () => {
 
       <p>Стоимость подписки: 299р</p>
       <p>+79992349352</p>
-      <button onClick={onCopy}>Скопировать телефон</button>
+
+      <CopyToClipboard text={'+79992349352'}>
+          <button>Скопировать телефон</button>
+      </CopyToClipboard>
+
     </div>
   );
 }
