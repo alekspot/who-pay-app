@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  max-width: 320px;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin: 0 auto;
+}
+td {
+  border: solid 1px #cccc;
+  padding: 5px;
+}
+
+.active {
+  background: rgb(15, 138, 52);
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  background: #ccc;
+  line-height: 2;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
